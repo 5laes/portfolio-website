@@ -5,6 +5,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faSun } from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const Navbar = ({ theme, setTheme }) => {
     
@@ -16,10 +17,10 @@ const Navbar = ({ theme, setTheme }) => {
         <div className='navbar'>
             <FontAwesomeIcon icon={faUser} size="2xl" style={theme == "light" ? {color: "#000000"} : {color: "#ffffff"}} className='logo'/>
             <ul>
-                <li>Home</li>
-                <li>Socials</li>
-                <li>Projects</li>
-                <li>Links</li>
+                <li><Link to={'Home'}>Home</Link></li>
+                <li><Link to={'Socials'}>Socials</Link></li>
+                <li><Link to={'Projects'}>Projects</Link></li>
+                <li><Link to={'Links'}>Links</Link></li>
             </ul>
             <div className='search-box'>
                 <input type="text" placeholder='Search' />
